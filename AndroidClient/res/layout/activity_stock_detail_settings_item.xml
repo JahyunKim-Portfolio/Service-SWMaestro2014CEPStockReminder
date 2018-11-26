@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/list_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#F0F0F0"
+    android:paddingLeft="@dimen/item_parent_paddingLeft"
+    android:paddingRight="@dimen/item_parent_paddingRight"
+    android:paddingTop="@dimen/item_parent_paddingTop"
+    android:paddingBottom="@dimen/item_parent_paddingBottom" >
+    
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentLeft="true"
+        android:layout_marginRight="8dp"
+        android:layout_centerVertical="true">
+	    <ImageView
+	        android:id="@+id/image"
+	        android:layout_width="30dp"
+	        android:layout_height="25dp"
+	        android:background="#3CB371"
+	        android:scaleType="fitXY"
+	        android:src="@drawable/white_arrow_up" />
+	
+	    <View
+	        android:id="@+id/type_color"
+	        android:layout_width="30dp"
+	        android:layout_height="8dp"
+	        android:background="#6A0808" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/signal"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="상승주"
+        android:textSize="20sp"
+        android:layout_toRightOf="@id/linear"
+        android:layout_centerVertical="true"
+        android:typeface="monospace"
+        />
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        android:divider="@drawable/vertical_divider_little_light"
+        android:showDividers="middle|beginning"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        >
+	    <ImageButton
+	        android:id="@+id/alarm_bt"
+	        android:title="알람설정"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:src="@drawable/push_alarm"
+	        style="?android:attr/borderlessButtonStyle"
+	        android:adjustViewBounds="true"
+	        />
+	     <ImageButton
+	        android:title="삭제"
+	        android:id="@+id/delete_bt"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:src="@drawable/ic_action_cancel"
+	        style="?android:attr/borderlessButtonStyle"
+	        android:adjustViewBounds="true"
+	        />
+     </LinearLayout>
+</RelativeLayout>
+
+            

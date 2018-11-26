@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linear"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1"
+    >
+    
+    <!-- 주식 종목별 가격 외 여러가지 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:orientation="vertical">
+        
+        <!-- 첫번 째 줄 -->
+        <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="wrap_content"
+        		android:layout_height="wrap_content" 
+        		android:text="1,145,000"
+        		android:textSize="30sp"
+        		android:layout_marginRight="10dp"
+        		android:textStyle="bold"
+        		/>
+            <TextView
+                android:id="@+id/price_diff"
+                android:layout_width="wrap_content"
+        		android:layout_height="wrap_content" 
+        		android:text="+10,500"
+        		android:textSize="20sp"
+        		android:textColor="#FF0000"
+        		android:layout_marginRight="5dp"
+        		/>
+            <TextView
+                android:id="@+id/price_diff_percent"
+                android:layout_width="wrap_content"
+        		android:layout_height="wrap_content" 
+        		android:text="(+7.52%)"
+        		android:textSize="20sp"
+        		android:textColor="#FF0000"
+        		/>
+        </LinearLayout>
+        
+        <!--  두번째 줄 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="4"
+            >
+            <TextView
+                android:id="@+id/label1"
+                android:layout_width="0dp"
+        		android:layout_height="wrap_content" 
+        		android:text="고가"
+        		android:textSize="14sp"
+        		android:gravity="left"
+        		android:layout_weight="1"
+        		android:typeface="monospace"       		
+        		/>
+            <TextView
+                android:id="@+id/highest_price"
+                android:layout_width="0dp"
+        		android:layout_height="wrap_content" 
+        		android:text="1,210,000"
+        		android:textSize="14sp"
+        		android:gravity="right"
+        		android:layout_weight="1"
+        		android:textColor="#FF0000"
+        		android:paddingRight="20dp"
+        		/>
+            <TextView
+                android:id="@+id/label2"
+                android:layout_width="0dp"
+        		android:layout_height="wrap_content" 
+        		android:text="저가"
+        		android:textSize="14sp"
+        		android:gravity="left"
+        		android:layout_weight="1"
+        		android:paddingLeft="20dp"
+        		android:typeface="monospace"
+        		/>
+            <TextView
+                android:id="@+id/lowest_price"
+                android:layout_width="0dp"
+        		android:layout_height="wrap_content" 
+        		android:text="1,112,000"
+        		android:textSize="14sp"
+        		android:gravity="right"
+        		android:layout_weight="1"
+        		android:textColor="#0000FF"
+        		/>
+        </LinearLayout>
+        
+        
+        <!-- 세번째 줄 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="4"
+            >
+            <TextView
+                android:id="@+id/label3"
+                android:layout_width="0dp"
+        		android:layout_height="wrap_content" 
+        		android:text="거래량"
+        		android:textSize="14sp"
+        		android:gravity="left"
+        		android:layout_weight="1"
+        		android:typeface="monospace"
+        		/>
+            <TextView
+                android:id="@+id/trade_volume"
+                android:layout_width="0dp"
+        		android:layout_height="wrap_content" 
+        		android:text="400,000"
+        		android:textSize="14sp"
+        		android:gravity="right"
+        		android:layout_weight="1"
+        		android:textColor="#707070"
+        		android:paddingRight="20dp"
+        		/>
+            <TextView
+                android:id="@+id/label4"
+                android:layout_width="0dp"
+        		android:layout_height="wrap_content" 
+        		android:text="거래량평균"
+        		android:textSize="13sp"
+        		android:gravity="left"
+        		android:layout_weight="1"
+        		android:paddingLeft="20dp"
+        		android:typeface="monospace"
+        		/>
+            <TextView
+                android:id="@+id/trade_volume_average"
+                android:layout_width="0dp"
+        		android:layout_height="wrap_content" 
+        		android:text="290,000"
+        		android:textSize="14sp"
+        		android:gravity="right"
+        		android:layout_weight="1"
+        		android:textColor="#707070"
+        		/>
+        </LinearLayout>
+    </LinearLayout>
+    
+        <!-- 구분선 -->
+        <View
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#707070"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="신호"
+            android:textSize="17sp"
+            android:background="#141414"
+            android:textColor="#FFFFFF"
+            android:gravity="center"
+            android:padding="6dp"
+            android:typeface="monospace"
+            />
+    
+    <!-- 리스트 뷰 -->
+    <!--  이 리스트 뷰에 저장되는 녀석은 fragment_singal_stock_item_child.xml 을 쓴다. -->
+
+     <com.handmark.pulltorefresh.library.PullToRefreshListView
+         xmlns:ptr="http://schemas.android.com/apk/res-auto"
+         android:id="@+id/ptr_list"
+         android:layout_width="match_parent"
+         android:layout_height="0dp"
+         android:layout_weight="1"
+         ptr:ptrHeaderBackground="#555555"
+         ptr:ptrHeaderTextColor="@android:color/white" />
+    
+    <FrameLayout
+        android:id="@+id/bottom_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+        
+</LinearLayout>

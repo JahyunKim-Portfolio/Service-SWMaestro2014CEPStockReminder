@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ExpandableListView
+        android:id="@+id/optionList"
+        android:layout_width="match_parent"
+        android:layout_height="282dp"
+
+        android:layout_weight="0.08"
+        android:childDivider="@android:color/transparent"
+        android:divider="#FFFFFF"
+        android:dividerHeight="0dp"
+        android:groupIndicator="@android:color/transparent" >
+    </ExpandableListView>
+
+    <FrameLayout
+        android:id="@+id/bottom_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

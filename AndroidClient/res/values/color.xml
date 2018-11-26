@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="condition_type_easy">#255505</color>
+    <color name="condition_type_easy_light">#CFE4C8</color>   
+    <color name="condition_type_hard">#550514</color>
+    <color name="condition_type_hard_light">#E4C8C8</color>
+    <color name="condition_type_custom">#040404</color>
+    <color name="signal_type_total">#FD8399</color>
+    <color name="signal_type_indiv">#AACF87</color>
+    <color name="new_signal_noti">#FD6C28</color>
+    <color name="background_black">#141414</color>
+    <color name="total_cnt">#FD6C28</color>
+    <color name="indiv_cnt">#5ED75A</color>
+    <color name="tag_black">#141414</color>
+    <color name="red">#FF0000</color>
+    <color name="blue">#0000FF</color>
+    <color name="black">#000000</color>
+    <color name="ltlt_gray">#F0F0F0</color>
+</resources>

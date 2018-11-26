@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/list_item_child"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#F0F0F0"
+    android:paddingBottom="0dp"
+    android:paddingLeft="15dip"
+    android:paddingTop="0dp" >
+    
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="8dp"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="25dp"
+            android:layout_height="20dp"
+            android:background="#3CB371"
+            android:scaleType="fitXY"
+            android:src="@drawable/white_arrow_up" />
+
+        <View
+            android:id="@+id/type_color"
+            android:layout_width="25dp"
+            android:layout_height="6dp"
+            android:background="#6A0808" />
+    </LinearLayout>
+<!-- Bottom 으로 정렬이 안되어서 LinearLayout을 씀 -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/linear" 
+        android:gravity="center_vertical"
+        >
+        
+        <TextView
+            android:id="@+id/signal"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:includeFontPadding="false"
+            android:text="상승주"
+            android:textSize="15sp"
+            android:typeface="monospace"
+            android:paddingTop="1dp"
+            android:singleLine="true"
+             />
+
+        <TextView
+            android:id="@+id/signal_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/signal_type_total"
+            android:text="전체"
+            style="@style/tagStyle"
+             />    
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/linear_bt"
+        android:includeFontPadding="false"
+        android:text="10/04 15:30"
+        android:layout_marginRight="10dp"
+        android:textSize="15sp"
+        android:typeface="monospace" />
+    
+    
+    <LinearLayout
+        android:id="@id/linear_bt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:divider="@drawable/vertical_divider_light"
+        android:orientation="horizontal"
+        android:showDividers="beginning" >
+
+        <ImageButton
+            android:id="@+id/alarm_bt"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/push_alarm"
+            android:title="알람설정" />
+    </LinearLayout>
+
+</RelativeLayout>

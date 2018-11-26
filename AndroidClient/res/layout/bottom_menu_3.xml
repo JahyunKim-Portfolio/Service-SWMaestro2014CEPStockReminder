@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bottom_menu"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#141414"
+    android:orientation="horizontal"
+    android:weightSum="2"
+    android:divider="@drawable/vertical_divider"
+    android:showDividers="middle" >
+    
+    <Button
+        android:id="@+id/cancle_btn"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="취소"
+        android:textSize="17sp" 
+        android:textColor="#FFFFFF"
+        />
+
+
+    <Button
+        android:id="@+id/admit_btn"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="확인"
+        android:textSize="17sp"  
+        android:textColor="#FFFFFF"
+        android:typeface="monospace"    />
+
+</LinearLayout>

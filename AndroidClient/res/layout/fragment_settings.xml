@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fragment_settings_root"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:padding="20dp"  >
+    
+    <RelativeLayout
+        android:id="@+id/set_push"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F0F0F0" 
+        android:layout_marginBottom="20dp" >
+        
+        <TextView
+            android:id="@+id/set_push_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="PUSH 알림 받기"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:typeface="monospace"
+            />
+        
+        <!-- 토글 버튼 또는 스위치로 하는 것을 고려 -->
+        <!-- Button에 Background를 설정하면 클릭하는 것처럼 보여지지가 않음
+        따라서 FrameLayout을 두고 background를 설정함 -->
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#141414"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            >
+	        <Button 
+	            android:id="@+id/set_push_button"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="ON"
+	            android:textColor="#FFFFFF"
+	            style="?android:attr/borderlessButtonStyle"
+	            />
+        </FrameLayout>
+        
+    </RelativeLayout>
+    
+    
+    
+    
+    <RelativeLayout
+        android:id="@+id/delete_signal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F0F0F0" 
+        android:layout_marginBottom="20dp"    >
+        
+        <TextView
+            android:id="@+id/delete_signal_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="수신 신호 전체 삭제"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:typeface="monospace"
+            />
+        
+        <!-- 토글 버튼 또는 스위치로 하는 것을 고려 -->
+        <!-- Button에 Background를 설정하면 클릭하는 것처럼 보여지지가 않음
+        따라서 FrameLayout을 두고 background를 설정함 -->
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#141414"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            >
+	        <Button 
+	            android:id="@+id/delete_signal_button"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="DO"
+	            android:textColor="#FFFFFF"
+	            style="?android:attr/borderlessButtonStyle"
+	            />
+        </FrameLayout>
+        
+    </RelativeLayout>    
+ 
+    
+    <RelativeLayout
+        android:id="@+id/reset_signal_setting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp" 
+        android:background="#F0F0F0"  >
+        
+        <TextView
+            android:id="@+id/reset_signal_setting_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="신호 설정 초기화"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:typeface="monospace"
+            />
+        
+        <!-- 토글 버튼 또는 스위치로 하는 것을 고려 -->       
+        <!-- Button에 Background를 설정하면 클릭하는 것처럼 보여지지가 않음
+        따라서 FrameLayout을 두고 background를 설정함 -->
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#141414"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            >
+	        <Button 
+	            android:id="@+id/reset_signal_setting_button"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="DO"
+	            android:textColor="#FFFFFF"
+	            style="?android:attr/borderlessButtonStyle"
+	            />
+        </FrameLayout>
+        
+    </RelativeLayout>
+
+    
+    
+    
+    
+    <RelativeLayout
+        android:id="@+id/show_my_stock"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F0F0F0"
+        android:layout_marginBottom="20dp"   >
+        
+        <TextView
+            android:id="@+id/show_my_stock_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="내 종목 전체 보기"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:typeface="monospace"
+            />
+        
+        <!-- 토글 버튼 또는 스위치로 하는 것을 고려 -->
+        <!-- Button에 Background를 설정하면 클릭하는 것처럼 보여지지가 않음
+        따라서 FrameLayout을 두고 background를 설정함 -->
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#141414"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            >
+	        <Button 
+	            android:id="@+id/show_my_stock_button"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="DO"
+	            android:textColor="#FFFFFF"
+	            style="?android:attr/borderlessButtonStyle"
+	            />
+        </FrameLayout>
+        
+    </RelativeLayout>
+    <!--  더 추가할 것 -->
+
+</LinearLayout>

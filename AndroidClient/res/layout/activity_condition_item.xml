@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/condition_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="10dip"
+    android:paddingRight="10dip"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    android:background="#FFFFFF" >
+    
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentLeft="true"
+        android:layout_marginRight="8dp"
+        android:layout_centerVertical="true">
+	    <ImageView
+	        android:id="@+id/image"
+	        android:layout_width="30dp"
+	        android:layout_height="25dp"
+	        android:background="#3CB371"
+	        android:scaleType="fitXY"
+	        android:src="@drawable/white_arrow_up" />
+	
+	    <View
+	        android:id="@+id/type_color"
+	        android:layout_width="30dp"
+	        android:layout_height="8dp"
+	        android:background="#6A0808" />
+    </LinearLayout>
+    
+    
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/linear"
+        >
+	    <TextView
+            android:id="@+id/condition_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="5dp"
+            android:includeFontPadding="false"
+            android:text="주가상승"
+            android:textSize="20sp"
+            android:typeface="monospace" />
+
+        <TextView
+            android:id="@+id/rank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="5dp"
+            android:layout_toRightOf="@id/condition_name"
+            android:background="#EB7149"
+            android:includeFontPadding="false"
+            android:paddingBottom="0dp"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"
+            android:paddingTop="0dp"
+            android:text="1"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/detail"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/condition_name"
+            android:layout_marginRight="5dp"
+            android:includeFontPadding="false"
+            android:singleLine="true"
+            android:text="주가등락률"
+            android:textSize="12sp"
+            android:typeface="monospace" />
+	</RelativeLayout>
+    
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true">
+	    <RelativeLayout
+	        android:layout_width="60dp"
+	        android:layout_height="22dp"
+	        >
+		    <ImageView
+		        android:id="@+id/people"
+		        android:layout_width="22dp"
+		        android:layout_height="match_parent"
+		        android:scaleType="fitXY"
+		        android:src="@drawable/ic_action_person"
+		        android:layout_alignParentLeft="true"
+		        android:layout_centerVertical="true"   />
+		    <TextView
+		        android:id="@+id/people_cnt"
+		        android:layout_height="wrap_content"
+		        android:layout_width="wrap_content"
+		        android:text="1170" 
+		        android:textSize="14sp"
+		        android:layout_alignParentRight="true"
+		        android:layout_centerVertical="true"
+		        android:includeFontPadding="false" />		    
+	    </RelativeLayout>
+	    
+	    <RelativeLayout
+	        android:layout_width="60dp"
+	        android:layout_height="22dp"
+	        >
+		    <ImageView
+		        android:id="@+id/love"
+		        android:layout_width="22dp"
+		        android:layout_height="match_parent"
+		        android:scaleType="fitXY"
+		        android:src="@drawable/ic_action_favorite"
+		        android:layout_alignParentLeft="true"
+		        android:layout_centerVertical="true" 
+		        />
+		    <TextView
+		        android:id="@+id/love_cnt"
+		        android:layout_height="wrap_content"
+		        android:layout_width="wrap_content"
+		        android:text="340" 
+		        android:textSize="14sp"
+		        android:layout_alignParentRight="true"
+		        android:layout_centerVertical="true"
+		        android:includeFontPadding="false" />		    
+	    </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>
+    
+    

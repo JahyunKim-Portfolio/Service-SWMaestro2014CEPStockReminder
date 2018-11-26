@@ -1,0 +1,12 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item 
+        android:id="@+id/action_add_alarm"
+        android:title="신호추가전체"
+        android:icon="@drawable/ic_action_add_alarm"
+        android:showAsAction="always" />
+    <item 
+        android:id="@+id/action_my_settings"
+        android:title="설정"
+        android:icon="@drawable/ic_action_settings"
+        android:showAsAction="always" />
+</menu>

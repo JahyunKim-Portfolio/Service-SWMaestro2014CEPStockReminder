@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linear"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="10dp" 
+        android:orientation="vertical"
+        >
+        <TextView
+            android:id="@+id/signal_name" 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="성장주 &amp; 실적호전주"
+            android:gravity="center"
+            android:textSize="25sp"
+            android:textColor="#FFFFFF"
+            android:background="#141414"
+            android:padding="10dp"
+            android:typeface="monospace"
+            />
+        <View 
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="#E1673F"
+            />
+    </LinearLayout>
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"        
+        android:text="포함조건"
+        android:textSize="16sp"
+        android:textColor="#FFFFFF"
+        android:background="#141414"
+        android:paddingLeft="20dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:typeface="monospace"
+        />
+    
+    <!-- 포함 조건 내용이 들어갈 부분 -->
+    <!-- 그리드 또는 리니어 고려 -->
+    <LinearLayout
+        android:id="@+id/cond_linear"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp"
+
+        />
+   
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="최근신호"
+        android:textSize="16sp"
+        android:textColor="#FFFFFF"
+        android:background="#141414"
+        android:paddingLeft="20dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:typeface="monospace"
+        />
+    
+     <com.handmark.pulltorefresh.library.PullToRefreshListView
+         xmlns:ptr="http://schemas.android.com/apk/res-auto"
+         android:id="@+id/ptr_list"
+         android:layout_width="match_parent"
+         android:layout_height="0dp"
+         android:layout_weight="1"
+         ptr:ptrHeaderBackground="#555555"
+         ptr:ptrHeaderTextColor="@android:color/white"      
+          />
+
+    <FrameLayout
+        android:id="@+id/bottom_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+</LinearLayout>

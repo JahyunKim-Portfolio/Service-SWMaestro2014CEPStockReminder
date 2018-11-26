@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- fragment_signal_stock_item_parent.xml 과 동일하게 완전 동일 --><RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_parent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/item_parent_paddingLeft"
+    android:paddingRight="@dimen/item_parent_paddingRight"
+    android:paddingTop="@dimen/item_parent_paddingTop"
+    android:paddingBottom="@dimen/item_parent_paddingBottom"
+    android:background="#FFFFFF" >
+        
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:gravity="center_vertical"
+        >
+        
+        <TextView
+            android:id="@+id/stock_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:includeFontPadding="false"
+            android:text="삼성전자"
+            android:textSize="20sp"
+            android:typeface="monospace"
+            android:paddingTop="2dp" />
+    </LinearLayout>
+    
+    
+    <!-- 전체신호 갯수 표시하는 ImageView 필요 -->
+    <!-- 개별신호 갯수 표시하는 ImageView 필요 -->
+    
+    <!-- 서체 ROBOTO로 -->
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:text="1,141,000"
+        android:layout_marginRight="10dp"
+        android:includeFontPadding="false"
+        />
+    
+    
+    <TextView
+        android:id="@+id/diff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/price"
+        android:layout_toLeftOf="@+id/diff_percent"
+        android:layout_alignBaseline="@id/diff_percent"
+        android:textSize="12sp"
+        android:text="-4,500"
+        android:textColor="#0000FF"
+        android:layout_marginRight="5dp"
+        android:includeFontPadding="false"
+        />
+    
+    <TextView
+        android:id="@id/diff_percent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/price"
+        android:textSize="12sp"
+        android:text="(-7.32%)"
+        android:textColor="#0000FF"
+        android:layout_marginRight="10dp"
+        android:includeFontPadding="false"
+        />
+
+</RelativeLayout>

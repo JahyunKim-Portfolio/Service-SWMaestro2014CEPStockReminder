@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linear"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"        
+        android:text="검색 조건"
+        android:textSize="16sp"
+        android:textColor="#FFFFFF"
+        android:background="#141414"
+        android:paddingLeft="20dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:typeface="monospace"
+        android:layout_marginTop="10dp"
+        />
+    
+    <!-- 검색 조건 내용이 들어갈 부분 -->
+    <!-- 그리드 또는 리니어 고려 -->
+    <LinearLayout
+        android:id="@+id/cond_linear"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp"
+
+        />
+   
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="해당 종목"
+        android:textSize="16sp"
+        android:textColor="#FFFFFF"
+        android:background="#141414"
+        android:paddingLeft="20dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:typeface="monospace"
+        />
+    
+     <ListView
+         android:id="@+id/list"
+         android:layout_width="match_parent"
+         android:layout_height="0dp"
+         android:layout_weight="1"
+          />
+</LinearLayout>

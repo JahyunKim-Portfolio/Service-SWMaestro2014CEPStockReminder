@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.product"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="19" />
+    
+    <!-- For GCM -->
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <permission android:name="com.example.product.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+    <uses-permission android:name="com.example.gcm.permission.C2D_MESSAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/mylogo"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.Holo.Light" >
+        
+        <!-- GCM 메타데이터 -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        
+        <!-- GCM 리시버 -->
+        <receiver
+            android:name=".GcmBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <category android:name="com.example.product" />
+            </intent-filter>
+        </receiver>
+        <service android:name=".GcmIntentService" />
+        
+        
+		<activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/myTabStyle"
+            android:launchMode="singleTask" 
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name=".SearchActivity"
+            android:label="검색창"
+            android:screenOrientation="portrait" >           
+        </activity>
+        
+        <activity
+            android:name=".ActivityStockDetail"
+            android:label="ActivityStockDetail"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+        
+        <activity
+            android:name=".ActivityStockDetailSettings"
+            android:label="ActivityStockDetailSettings"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+        <activity
+            android:name=".ActivityCondition"
+            android:label="조건"
+            android:screenOrientation="portrait"
+            android:theme="@style/myTabStyle" >
+        </activity>
+        
+        <activity
+            android:name=".ActivitySignalDetail"
+            android:label="ActivitySignalDetail"
+            android:screenOrientation="portrait"
+             >
+        </activity>
+        
+        <activity
+            android:name=".ActivityMyStock"
+            android:label="내종목"
+            android:screenOrientation="portrait"
+             >
+        </activity>
+        
+        <activity
+            android:name="com.example.product.ActivityPopUp"
+            android:label="팝업" 
+            android:screenOrientation="portrait"
+            android:excludeFromRecents="true"
+            android:taskAffinity="com.example.product.popup"
+            android:launchMode="singleTask" 
+            >
+        </activity>
+        
+        <activity
+            android:name=".ActivitySearchResult"
+            android:label="검색 결과"
+            android:screenOrientation="portrait"
+             >
+        </activity>
+        
+        
+        <!-- 자현이 Activity -->
+        
+        <activity
+            android:name="com.example.product.SearchDetail"
+            android:label="신호추가"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyTheme.Holo.Light"
+             >
+        </activity>
+       
+        
+        <activity
+            android:name="com.example.product.OptionDetail"
+            android:label="조건상세" 
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light">
+            >
+        </activity>
+        
+        <activity
+            android:name="com.example.product.SearchItem"            
+            android:label="종목 검색"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light">
+        </activity>
+        
+        <activity
+            android:name="com.example.product.SearchByEvent"
+            android:label="종목으로 검색"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.Light" >
+        </activity>
+        
+        <activity
+            android:name="com.example.product.SearchItem2"
+            android:label="검색"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:theme="@style/myTabStyle2" >
+        </activity>
+
+            
+    </application>
+
+</manifest>

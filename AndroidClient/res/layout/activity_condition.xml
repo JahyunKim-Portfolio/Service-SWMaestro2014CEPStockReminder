@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mcontent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF" >
+    
+    <!--  tab menu -->
+    <LinearLayout
+        android:id="@+id/tabmenu"
+    	android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:orientation="horizontal"
+    	android:background="#141414"
+    	android:weightSum="2">
+        <Button
+            android:id="@+id/easy_condition_bt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            style="?android:attr/borderlessButtonStyle"
+            android:onClick="tabButtonOnClick"
+            android:text="간단조건"
+            android:textSize="17sp"
+            android:textColor="#FFFFFF"
+            android:typeface="monospace"
+            />
+        <Button
+            android:id="@+id/detail_condition_bt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            style="?android:attr/borderlessButtonStyle"
+            android:onClick="tabButtonOnClick"
+            android:text="일반조건"
+            android:textSize="17sp"
+            android:textColor="#FFFFFF"
+            android:typeface="monospace"
+            />
+    </LinearLayout>
+    
+    <!--  contents -->
+    <FrameLayout
+        android:id="@+id/frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

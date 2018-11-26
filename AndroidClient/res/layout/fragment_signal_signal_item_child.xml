@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/list_item_child"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#F0F0F0"
+    android:paddingBottom="0dp"
+    android:paddingLeft="15dip"
+    android:paddingTop="0dp" >
+    
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_centerVertical="true"  >
+        
+        <TextView
+            android:id="@+id/stock_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:includeFontPadding="false"
+            android:text="삼성전자"
+            android:textSize="17sp"
+            android:typeface="monospace"
+            />
+
+        <!-- BOLD 고려 -->
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:includeFontPadding="false"
+            android:text="1,745,000"
+            android:textStyle="bold"
+            android:textSize="17sp"
+            />
+    </LinearLayout>
+    
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/linear_bt"
+        android:includeFontPadding="false"
+        android:text="10/04 15:30:12"
+        android:textSize="15sp"
+        android:typeface="monospace"
+        android:layout_marginRight="10dp" />
+
+    <LinearLayout
+        android:id="@id/linear_bt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:divider="@drawable/vertical_divider_light"
+        android:orientation="horizontal"
+        android:showDividers="beginning" >
+
+        <ImageButton
+            android:id="@+id/alarm_bt"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/push_alarm"
+            android:title="알람설정" />
+    </LinearLayout> 
+
+</RelativeLayout>
